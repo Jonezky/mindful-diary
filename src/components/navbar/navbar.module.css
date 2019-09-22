@@ -1,0 +1,10 @@
+
+.navigation {
+    display: inline-block;
+}
+
+.navigation>ul>li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 1rem;
+}
