@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './entry.module.css';
 
-const Entry = () => {
+const Entry = (props) => {
     return (
         <div className={classes.main}>
-            This is an entry
+            {props.data.note}
         </div>
     )
 }

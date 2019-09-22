@@ -1,18 +1,15 @@
 import React from 'react';
 import Header from '../header/header';
 import classes from './layout.module.css';
-import Entries from '../../components/entries/entries';
-import EntryForm from '../../components/entryForm/entryForm';
-import Insights from '../../components/insights/insights';
+import Diary from '../../hoc/Diary/diary';
 
-const Layout = () => {
+
+const Layout = (props) => {
   return (
-    <div className="layout">
+    <div className={classes.layout}>
       <Header />
       <div className={classes.mainContent}>
-        <EntryForm />
-        <Entries />
-        <Insights />
+        <Diary />
       </div>
     </div>
   );
