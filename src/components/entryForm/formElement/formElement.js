@@ -7,7 +7,7 @@ const FormElement = () => {
             Form element
             <div className={classes.input}>
             <label for="happiness">Overall happiness</label>
-            <input type="range" min="1" max="10" step="0.5" value="5"name="happiness"></input>
+            <input type="range" min="1" max="10" step="0.5" defaultValue="5" name="happiness"></input>
             </div>        
         </div>
     )

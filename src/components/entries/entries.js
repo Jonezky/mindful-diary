@@ -7,7 +7,7 @@ const Entries = (props) => {
     
         const renderEntries = (entries) => {
             return(
-            entries.map((entry, index) => {
+            entries.map((entry) => {
                 console.log(entry);
                 return (
                     <Entry data={entry} key={entry.id}/>
