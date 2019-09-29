@@ -3,6 +3,7 @@ import EntryForm from '../../components/entryForm/entryForm';
 import Entries from '../../components/entries/entries';
 import Insights from '../../components/insights/insights';
 import {Route} from 'react-router-dom';
+import classes from './diary.module.css';
 
 class Diary extends Component {
   state = {
@@ -26,7 +27,7 @@ class Diary extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <React.Fragment className={classes.main}>
           <Route exact path="/" component={EntryForm} />
           <Route
             path="/entries"

@@ -1,9 +1,13 @@
 .main {
-    height: 50px;
+    width: 70%;
+    min-width: 300px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 8px auto;
     padding: 8px;
-    background-color: aquamarine;
 }
 
-.input {
+input {
     margin-left: 1rem;
+    vertical-align: middle;
 }
