@@ -2,4 +2,29 @@
   width: 100%;
   display: flex;
   flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buttons, .preview {
+  border-radius: 2px;
+  margin: 8px auto;
+  padding: 8px;
+  width: 70%;
+  min-width: 400px;
+  border: 1px solid lightgray;
+  margin-left: 1rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  margin-right: 8px;
+}
+
+.preview {
+  background-color: antiquewhite;
 }
