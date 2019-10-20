@@ -46,7 +46,7 @@ const FormElement = props => {
         id={props.name}
         component="input"
         type="range"
-        min="1"
+        min="0"
         max="10"
         step="0.5"
         defaultValue="5"

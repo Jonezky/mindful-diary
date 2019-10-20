@@ -11,8 +11,7 @@
 
 .mainContent {
     width: 50%;
-    min-width: 800px;
-    max-width: 1100px;
+    min-width: 500px;
     min-height: 800px;
     margin: auto;
     border: 1px #A4A2AA solid;

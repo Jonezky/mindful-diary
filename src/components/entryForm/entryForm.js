@@ -4,18 +4,7 @@ import FormElement from './formElement/formElement';
 import {Form, Field} from 'react-final-form';
 
 const EntryForm = () => {
-  const oldForm = (
-    <div className={classes.main}>
-      <h2>New Entry</h2>
-      <FormElement type="range" name="happiness" text="Overall happiness" />
-      <FormElement type="range" name="sleep" text="Sleep" />
-      <FormElement
-        type="checkbox"
-        name="meditation"
-        text="Did you meditate today?"
-      />
-    </div>
-  );
+
 
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -24,13 +13,13 @@ const EntryForm = () => {
     window.alert(JSON.stringify(values, 0, 2));
   };
 
-  const newForm = (
+    return (
     <>
       <div className={classes.main}>
         <h2>New Entry</h2>
         <Form
           onSubmit={onSubmit}
-          initialValues={{happiness: 5, sleep: 5, meditation: false}}
+          initialValues={{meditation: false, happiness: 5, sleep: 5, notes: null}}
           render={({handleSubmit, form, submitting, pristine, values}) => (
             <form onSubmit={handleSubmit}>
               <FormElement
@@ -45,11 +34,7 @@ const EntryForm = () => {
                 text="Overall happiness"
               />
 
-              <FormElement
-                type="range"
-                name="sleep"
-                text="Sleep quality"
-              />
+              <FormElement type="range" name="sleep" text="Sleep quality" />
 
               <FormElement type="notes" placeholder="Notes" />
 
@@ -66,8 +51,9 @@ const EntryForm = () => {
                   Reset
                 </button>
               </div>
+
               <div className={classes.preview}>
-                <pre>{JSON.stringify(values, 0, 2)}</pre>
+               <pre>{JSON.stringify(values, 0, 2)}</pre>
               </div>
             </form>
           )}
@@ -76,7 +62,6 @@ const EntryForm = () => {
     </>
   );
 
-  return newForm;
 };
 
 export default EntryForm;
